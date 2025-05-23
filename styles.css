@@ -1,0 +1,309 @@
+:root {
+  --header-height: 5rem; /* высота шапки */
+  --first-color: hsl(258, 54%, 48%); /* основной цвет */
+  --title-color: hsl(225, 64%, 18%); /* цвет заголовков */
+  --text-color: hsl(258, 8%, 35%); /* цвет текста */
+  --body-color: hsl(258, 60%, 98%); /* цвет фона */
+  --container-color: #fff; /* цвет контейнера */
+  --body-font: 'Jost', sans-serif; /* шрифт */
+  --biggest-font-size: 4.25rem; /* самый большой размер шрифта */
+  --h1-font-size: 2.25rem; /* размер шрифта h1 */
+  --h2-font-size: 1.5rem; /* размер шрифта h2 */
+  --h3-font-size: 1.25rem; /* размер шрифта h3 */
+  --normal-font-size: 1rem; /* нормальный размер шрифта */
+  --font-light: 300; /* толщина шрифта "легкий" */
+  --font-medium: 500; /* толщина шрифта "средний" */
+  --font-semibold: 600; /* толщина шрифта "полужирный" */
+  --z-fixed: 100; /* z-индекс для фиксированных элементов */
+}
+
+@media screen and (max-width: 1024px) {
+  :root {
+      --biggest-font-size: 2.75rem;
+      --h1-font-size: 1.5rem;
+      --h2-font-size: 1.25rem;
+      --h3-font-size: 1rem;
+      --normal-font-size: .938rem;
+  }
+}
+/* Обнуление стилей по умолчанию */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+/* Стили для body */
+body {
+font-family: var(--body-font);
+font-size: var(--normal-font-size);
+background-color: var(--body-color);
+color: var(--text-color);
+}
+/* Стили для заголовков */
+h1, h2, h3 {
+color: var(--title-color);
+font-weight: var(--font-semibold);
+}
+/* Стили для ссылок, списков и кнопок */
+a, ul, button {
+text-decoration: none;
+list-style: none;
+border: none;
+cursor: pointer;
+}
+/* Стили для параграфов */
+p {
+line-height: 1.6rem;
+text-align: justify;
+}
+/* Стили для изображений */
+img {
+max-width: 100%;
+border-radius: .75rem;
+}
+/* Стили для контейнера */
+.container {
+max-width: 1140px;
+margin: 0 auto;
+}
+/* Стили для грид-контейнера */
+.grid {
+display: grid;
+}
+/* Стили для секций */
+.section {
+padding: 8rem 0 2rem;
+}
+/* Стили для заголовков секций */
+.section__title {
+font-size: var(--h1-font-size);
+color: var(--first-color);
+text-align: center;
+margin-bottom: 3rem;
+}
+/* Стили для шапки */
+.header {
+width: 100%;
+background-color: var(--container-color);
+position: fixed;
+top: 0;
+left: 0;
+z-index: var(--z-fixed);
+}
+/* Стили для навигации */
+.nav {
+height: calc(var(--header-height) + 2.5rem);
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: 3rem;
+}
+/* Стили для списка навигации */
+.nav__list {
+display: flex;
+gap: 2rem;
+}
+/* Стили для ссылок навигации */
+.nav__link {
+color: var(--title-color);
+font-weight: var(--font-medium);
+position: relative;
+transition: .4s;
+}
+/* Стили для ссылок при наведении и активной */
+.nav__link:hover, .active-link {
+color: var(--first-color);
+}
+/* Стили для подчеркивания ссылок */
+.nav__link::before, .active-link::before {
+content: '';
+position: absolute;
+bottom: -.5rem;
+left: 0;
+width: 0;
+height: 2px;
+background-color: var(--first-color);
+transition: .4s;
+}
+/* Анимация подчеркивания при наведении */
+.nav__link:hover::before, .active-link::before {
+width: 30px;
+}
+/* Стили для секции "Главная" */
+.home {
+padding: 12.5rem 0 2rem;
+}
+/* Стили для контейнера секции "Главная" */
+.home__container {
+grid-template-columns: repeat(2, 1fr);
+gap: 2rem;
+}
+/* Стили для подзаголовков и заголовков секции "Главная" */
+.home__subtitle, .home__title {
+font-size: var(--biggest-font-size);
+line-height: 68px;
+font-weight: var(--font-light);
+}
+/* Стили для заголовков секции "Главная" */
+.home__title span {
+font-weight: var(--font-medium);
+}
+/* Стили для кнопок секции "Главная" */
+.home__buttons {
+display: flex;
+flex-direction: column;
+gap: .25rem;
+}
+/* Стили для текста кнопок секции "Главная" */
+.home__buttons span {
+color: var(--first-color);
+font-size: var(--h1-font-size);
+font-weight: var(--font-medium);
+}
+/* Стили для текста кнопок секции "Главная" */
+.home__buttons span:nth-child(2) {
+opacity: .7;
+}
+.home__buttons span:nth-child(3) {
+opacity: .4;
+}
+/* Стили для изображений секции "Главная" */
+.home__images {
+grid-template-columns: 4fr 8fr;
+gap: 1.875rem;
+}
+/* Стили для группы секции "Главная" */
+.home__group {
+margin-top: 2rem;
+grid-template-columns: 10fr 2fr;
+gap: 1.875rem;
+}
+/* Стили для описания секции "Главная" */
+.home__description {
+font-size: var(--h2-font-size);
+line-height: 36px;
+margin-bottom: 2.5rem;
+}
+/* Стили для социальных кнопок секции "Главная" */
+.home__social {
+display: flex;
+align-items: center;
+}
+/* Стили для заголовков социальных кнопок секции "Главная" */
+.home__social-follow {
+color: var(--title-color);
+font-size: 17px;
+font-weight: var(--font-medium);
+padding-right: 8.175rem;
+position: relative;
+}
+/* Стили для подчеркивания заголовков социальных кнопок секции "Главная" */
+.home__social-follow::after {
+content: '';
+position: absolute;
+right: 1rem;
+top: 58%;
+width: 100px;
+height: 2px;
+background-color: rgba(225, 64%, 18%, .15);
+}
+/* Стили для контейнера ссылок на соцсети */
+.home__social-links {
+display: flex;
+gap: .5rem;
+}
+/* Стили для ссылок на соцсети */
+.home__social-link {
+display: inline-flex;
+align-items: center;
+padding: 1rem .875rem;
+border-radius: .75rem;
+border: 1px solid rgba(225, 64%, 18%, .15);
+background-color: var(--container-color);
+color: var(--title-color);
+transition: .4s;
+}
+/* Стили для иконок ссылок на соцсети */
+.home__social-link i {
+font-size: var(--h2-font-size);
+}
+/* Стили для текста ссылок на соцсети */
+.home__social-link span {
+font-weight: var(--font-medium);
+overflow: hidden;
+max-width: 0;
+white-space: nowrap;
+transition: 1.2s;
+}
+/* Стили при наведении на ссылки на соцсети */
+.home__social-link:hover i, .home__social-link:hover span {
+color: var(--first-color);
+}
+/* Стили при наведении на ссылки на соцсети */
+.home__social-link:hover span {
+max-width: 400px;
+}
+/* Стили для секции "Обо мне" */
+.about__container {
+grid-template-columns: repeat(2, 1fr);
+gap: 1.875rem;
+}
+/* Стили для изображений секции "Обо мне" */
+.about__img {
+justify-self: center;
+}
+/* Стили для описания секции "Обо мне" */
+.about__description {
+color: var(--title-color);
+font-weight: var(--font-medium);
+font-size: 17px;
+margin-bottom: 1.5rem;
+}
+/* Стили для детализации секции "Обо мне" */
+.about__details {
+margin-bottom: 2.5rem;
+}
+/* Стили для элементов таймлайна*/
+.timeline__item {
+position: relative;
+padding-left: 3rem;
+margin-bottom: 2.5rem;
+}
+/* Стили для заголовка таймлайна */
+.timeline__title {
+font-size: var(--h3-font-size);
+font-weight: var(--font-medium);
+margin-bottom: 1rem;
+}
+/* Стили для даты таймлайна */
+.timeline__date {
+display: flex;
+align-items: center;
+gap: .4rem;
+font-size: var(--small-font-size);
+color: var(--first-color);
+}
+/* Стили для подвала */
+.footer {
+background-color: var(--first-color);
+padding: 2rem 0;
+}
+/* Стили для заголовка и ссылок подвала */
+.footer__title,
+.footer__link {
+color: var(--container-color);
+}
+/* Стили для социальных кнопок подвала */
+.footer__social {
+display: flex;
+justify-content: center;
+gap: 1.25rem;
+}
+/* Стили для ссылок на соцсети подвала */
+.footer__social-link {
+background-color: var(--body-color);
+color: var(--first-color);
+font-size: 1.25rem;
+padding: .48rem;
+border-radius: .5rem;
+}

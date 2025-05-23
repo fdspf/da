@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ru"> <!-- Указываем русский язык -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--BOXICONS (Иконки)-->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    
+    <!--CSS (Стили)-->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <title>  </title> <!-- Заголовок страницы (оставьте пустым, если не нужен) -->
+</head>
+
+<body>
+    <!--HEADER (Шапка сайта)-->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#" class="nav__link active-link">Главная</a> <!-- Ссылка "Главная" -->
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link">Обо мне</a> <!-- Ссылка "Обо мне" -->
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">Контакты</a> <!-- Ссылка "Контакты" -->
+                    </li>
+                </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!--MAIN (Основное содержание)-->
+    <main class="main">
+        <!--HOME (Главная секция)-->
+        <section class="home container" id="home">
+            <div class="home__container grid">
+                <div class="home__data">
+                    <h3 class="home__subtitle">Привет</h3> <!-- Подзаголовок "Привет" -->
+                    <h1 class="home__title">Я <span>Колька</span></h1> <!-- Заголовок "Я Аманжан" -->
+                    <div class="home__buttons">
+                        <span>немного</span> <!-- "Музыкант" -->
+                        <span>Программист</span> <!-- "Программист" -->
+                        <span>чуть-чуть</span> <!-- "Дизайнер" -->
+                    </div>
+                </div>
+
+                <div class="home__images grid">
+                    <img src="https://sun9-68.userapi.com/s/v1/ig2/-V_CrI6x0wRZgt5Tnv24zHYgg-jd2jcaChkqETxei4LuXfQDzOueHLTE5FPXEATR959fvN-f9Wc67ky48dWIJiAn.jpg?quality=95&as=32x25,48x37,72x55,108x83,160x123,240x185,360x277,469x361&from=bu&u=eIYHCNoKISQUkhZy2FbxpsET-1BuS88O0LVQXt10C_E&cs=469x361" class="home__img">
+                    <div class="swiper home-swiper">
+                        <div class="swiper-wrapper">
+                            <img src="https://sun9-2.userapi.com/s/v1/ig2/Jv0EjHENzlGHX6ZbQwcg3fA0kCxVQAc6hLgZIQJJhmXY4xu6AaVECOgQJREyWh2HUl0F2BzjAOu_jgiDUJDRxEYm.jpg?quality=95&as=32x24,48x36,72x54,108x81,160x120,240x180,360x270,480x360,540x405,640x480,720x540,1080x810,1280x960&from=bu&u=lSuc5s5KKsAHLUFuOBYmm2fhBu-X_QfGwg6w9_sST1Y&cs=1280x960" class="slide__img swiper-slide">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="home__group grid">
+                <div class="home__details">
+                    <p class="home__description">Привет, меня зовут Коля, и я студент второго курса амурского педагогического колледжа
+                         </p> <!-- Описание "Привет..." -->
+
+                    <div class="home__social">
+                        <span class="home__social-follow">Вы можете узнать обо мне</span> <!-- "Вы можете узнать..." -->
+
+                        <div class="home__social-links">
+                            <a href="https://t.me/weowtag" target="_blank" class="home__social-link">
+                                <i class='bx bxl-telegram' ></i>
+                                <span>Телеграмм</span> <!-- Ссылка на Телеграмм -->
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--ABOUT (Секция "Обо мне")-->
+        <section class="about section" id="about">
+            <div class="about__container container grid">
+                <img src="https://psv4.userapi.com/s/v1/d/C9OVwdRshAH5l9YCpH5OpMffKcOhYxMek75t3RHyhnoSAKhkxSQ86Izpct4g1lWcxNxKD7F1vPxIYgIpILw0vJo9LnCciYw4P8CqHx6e3aqzeDtf/detskoe_tigr.jpg" class="about__img">
+
+                <div class="about__data">
+                    <span class="section__subtitle abou__subttile"></span> <!-- Подзаголовок "Немного обо мне" -->
+                    <h2 class="section__title abotu__title">Обо мне</h2> <!-- Заголовок "Обо мне" -->
+
+                    <p class="about__description">Привет, если вы уже забыли, я Коля я студент второго курса амурского педагогического колледжа.
+                        Моё главное хобби - здоровый сон, всем советую.
+
+                        Я также интересуюсь программированием. Это не только хобби, но и полезный навык. Мне нравится решать сложные задачи, писать код и видеть результат своей работы. Программирование помогает мне развивать логическое мышление и креативность..
+                        
+                        Другое мое хобби - видеоигры, особенно factoria. Эта игра привлекает меня своим размеренным геймплеем и возможностью строить заводы с другими игроками. Я часто играю с друзьями, и это отличный способ провести время и развить навыки командной работы и взаимной агресси</p> <!-- Описание "Привет, меня зовут..." -->
+                    <p class="about__details"></p>
+                    <div class="about__award grid">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--EXPERIENCE (Секция "Опыт")-->
+        <section class="experience section" id="experience">
+            <h2 class="section__title">Опыт работы с HTML и CSS</h2> <!-- Заголовок "Опыт с HTML и CSS" -->
+
+            <div class="qualification__container container grid">
+                <div class="experience">
+                    <div class="timeline">
+                        <div class="timeline__item">
+                            <div class="circle__dot"></div>
+                            <span class="timeline__date">
+                                <i class='bx bxs-calendar'>2022</i>
+                            </span>
+                            <h3 class="timeline__title">2022</h3>
+                            <p class="timeline__text">Участвовал в создание сайта для школы</p>
+                        </div>
+
+                        <div class="timeline__item">
+                            <div class="circle__dot"></div>
+                            <span class="timeline__date">
+                                <i class='bx bxs-calendar'>2024</i>
+                            </span>
+                            <h3 class="timeline__title">2024</h3>
+                            <p class="timeline__text">Участвовал в олимпиаде по HTML</p>
+                        </div>
+
+                            <div class="timeline__item">
+                                <div class="circle__dot"></div>
+                                <span class="timeline__date">
+                                    <i class='bx bxs-calendar'>2024</i>
+                                </span>
+                                <h3 class="timeline__title">2024</h3>
+                                <a href="file:///C:/Users/MSI/Desktop/ПОРТ/пк.html" target="_blank">сделал обучающий сайт, что представляет из себя компьютер</a> <file:///C:/Users/MSI/Desktop/ПОРТ/пк.html>
+                        </div>
+                    </div>
+                </div>    
+            </div>
+        </section>
+
+    <!-- FOOTER (Подвал сайта)-->
+    <footer class="footer">
+        <div class="footer__container container">
+            <h1 class="footer__title">Разделы</h1> <!-- Заголовок "Разделы" -->
+
+            <ul class="footer__list">
+                <li>
+                    <a href="#" class="footer__link">Обо мне</a> <!-- Ссылка "Обо мне" в подвале -->
+                </li>
+
+                <li>
+                    <a href="#EXPERIENCE" class="footer__link">Проекты</a> <!-- Ссылка "Проекты" в подвале -->
+                </li>
+
+                <li>
+                    <a href="#" class="footer__link">Контакты</a> <!-- Ссылка "Контакты" в подвале -->
+                </li>
+            </ul>
+
+            <div class="footer__social">
+                <a href="#" class="footer__social-link">
+                    <i class='bx bxl-telegram' ></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
